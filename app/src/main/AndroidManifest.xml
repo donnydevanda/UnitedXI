@@ -7,14 +7,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/unitedlogo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/unitedlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.UnitedXI">
-        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".AboutActivity" />
         <activity android:name=".DetailActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen" android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

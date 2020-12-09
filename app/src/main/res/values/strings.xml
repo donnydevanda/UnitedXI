@@ -3,4 +3,6 @@
     <string name="player_name">Player Name</string>
     <string name="player_description">Player Description</string>
     <string name="about_me">About Me</string>
+    <string name="about_email">About Email</string>
+    <string name="about_name">About Name</string>
 </resources>
