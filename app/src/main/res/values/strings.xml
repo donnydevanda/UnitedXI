@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UnitedXI</string>
+    <string name="player_name">Player Name</string>
+    <string name="player_description">Player Description</string>
+</resources>
