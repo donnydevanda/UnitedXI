@@ -3,6 +3,8 @@ package com.devanda.unitedxi
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,6 +31,17 @@ class MainActivity : AppCompatActivity() {
 
         list.addAll(PlayersData.listData)
         showRecyclerList()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.about_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val moveAbout = Intent(this@MainActivity, AboutActivity::class.java)
+        startActivity(moveAbout)
+        return super.onOptionsItemSelected(item)
     }
 
     private fun showRecyclerList(){

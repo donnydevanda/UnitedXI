@@ -2,6 +2,7 @@ package com.devanda.unitedxi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
@@ -18,6 +19,8 @@ class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = intent.getStringExtra(EXTRA_NAME)
 
         var playerName: TextView = findViewById(R.id.detail_name)
         var playerDescription: TextView = findViewById(R.id.detail_description)
@@ -34,5 +37,10 @@ class DetailActivity : AppCompatActivity() {
             .apply(RequestOptions())
             .into(playerPhoto)
 
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        finish()
+        return super.onOptionsItemSelected(item)
     }
 }
